@@ -1,0 +1,33 @@
+---
+title: "Extracting Requested Drugs"
+author: "Michael Quinn Maguire, MS"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+# Loading packages for cleaning and importing
+
+```{r, message = FALSE}
+library(tidyverse)
+library(readxl)
+```
+
+# Examine the sheets in the excel file
+
+
+```{r}
+phc_file_sheets <- readxl::excel_sheets(
+  path = './data/raw/Aggregated data_tn_meds _version3.xlsx'
+)
+
+phc_file_sheets
+```
+
+- PHC requested the following drugs:
+  1. Carbamazepine
+  2. Oxcarbazepine
+  3. Gabapentin
+  4. Pregabaline 
+  5. Gabapentin and Pregabalin (gabapentinoids)
+  6. opioids
+
